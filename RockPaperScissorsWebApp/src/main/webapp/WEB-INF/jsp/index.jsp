@@ -27,7 +27,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="${pageContext.request.contextPath}">Home</a></li>
-            <li><a href="#">Single Match</a></li>
+            <li><a href="${pageContext.request.contextPath}/singlematch">Single Match</a></li>
             <li><a href="#">Tournament Mode</a></li>
             <li><a href="#">Tournament Results</a></li>
             <li><a href="${pageContext.request.contextPath}/about">About</a></li>
@@ -93,7 +93,7 @@
           <div class="col-md-6 col-xs-12">
             <ul>
               <li><a href="${pageContext.request.contextPath}">Home</a></li>
-              <li><a href="#">Single Match</a></li>
+              <li><a href="${pageContext.request.contextPath}/singlematch">Single Match</a></li>
               <li><a href="#">Tournament Mode</a></li>
               <li><a href="#">Tournament Results</a></li>
               <li><a href="${pageContext.request.contextPath}/about">About</a></li>

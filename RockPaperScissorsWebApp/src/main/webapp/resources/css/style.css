@@ -45,11 +45,26 @@ img.demo1 {
 	border: 1px solid #ccc; 
 }
 
+img.demo2 {
+	width: 100%;
+	padding: 3px;
+	border: 1px solid #ccc; 
+}
+
 .about-image-developer {
 	text-align: center;
 }
 
 .about-image-title {
+	text-align: center;	
+}
+
+.singlematch-image-title {
+	text-align: center;	
+}
+
+.singlematch-image-text {
+	font-style: italic;
 	text-align: center;	
 }
 
@@ -87,7 +102,7 @@ section#about {
 	height: 740px;
 }
 
-section#contact {
+section#singlematch {
 	height: 740px;
 }
 
