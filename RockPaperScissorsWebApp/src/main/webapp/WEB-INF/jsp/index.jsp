@@ -29,7 +29,8 @@
             <li class="active"><a href="${pageContext.request.contextPath}">Home</a></li>
             <li><a href="#">Single Match</a></li>
             <li><a href="#">Tournament Mode</a></li>
-            <li><a href="#">About me</a></li>
+            <li><a href="#">Tournament Results</a></li>
+            <li><a href="${pageContext.request.contextPath}/about">About</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -91,10 +92,11 @@
         <div class="row">
           <div class="col-md-6 col-xs-12">
             <ul>
-              <li><a href="#">Home</a></li>
+              <li><a href="${pageContext.request.contextPath}">Home</a></li>
               <li><a href="#">Single Match</a></li>
               <li><a href="#">Tournament Mode</a></li>
-              <li><a href="#">About me</a></li>
+              <li><a href="#">Tournament Results</a></li>
+              <li><a href="${pageContext.request.contextPath}/about">About</a></li>
             </ul>
           </div>
           <div class="col-md-6 col-xs-12">

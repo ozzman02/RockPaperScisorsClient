@@ -38,6 +38,21 @@ img.demo {
 	border: 1px solid #ccc; 
 }
 
+
+img.demo1 {
+	width: 100%;
+	padding: 3px;
+	border: 1px solid #ccc; 
+}
+
+.about-image-developer {
+	text-align: center;
+}
+
+.about-image-title {
+	text-align: center;	
+}
+
 section#feature {
 	background: #1caa98;
 	color: #fff;

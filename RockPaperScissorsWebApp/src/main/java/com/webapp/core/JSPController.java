@@ -12,4 +12,10 @@ public class JSPController {
 		return "index";
 	}
 	
+	@RequestMapping("/about")
+	public String about(ModelAndView modelAndView) {
+		return "about";
+	}
+	
+	
 }
