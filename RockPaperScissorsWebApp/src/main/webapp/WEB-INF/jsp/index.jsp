@@ -36,10 +36,10 @@
     </nav>
     <div class="jumbotron">
       <div class="container"> 
-        <div class="row">
+        <div id="welcome-div" class="row">
           <div class="col-md-6">
             <h1>Rock, Paper, Scissors Game !!!</h1>
-            <p>Welcome to our online gaming platform, play now and enjoy our amazing features</p>
+            <h2>Welcome to our online gaming platform, play now and enjoy our amazing features</h2>
           </div>
         </div>
       </div>
@@ -50,20 +50,20 @@
           <div class="col-md-4">
             <img src="${pageContext.request.contextPath}/resources/img/singlematch.jpg" class="demo">
             <h2>Single Match</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit ac mauris vel gravida. Nunc varius nibh quis bibendum iaculis.</p>
-            <a href="#" class="btn btn-default">Read More</a>
+            <p>Played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand.</p>
+            <a href="#" class="btn btn-default">Instructions</a>
           </div>
           <div class="col-md-4">
             <img src="${pageContext.request.contextPath}/resources/img/rockpaperscissors.jpg" class="demo">
             <h2>Tournament Mode</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit ac mauris vel gravida. Nunc varius nibh quis bibendum iaculis.</p>
-            <a href="#" class="btn btn-default">Read More</a>
+            <p>Have fun along with other players as you participate in our international online tournament. Play to be the ultimate champion!</p>
+            <a href="#" class="btn btn-default">Instructions</a>
           </div>
           <div class="col-md-4">
             <img src="${pageContext.request.contextPath}/resources/img/bigstock_Rock_Paper_And_Scissors_3994136.jpg" class="demo">
             <h2>Download sample files</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit ac mauris vel gravida. Nunc varius nibh quis bibendum iaculis.</p>
-            <a href="#" class="btn btn-default">Read More</a>
+            <p>Dowload our free sample files where you can have a guideline to play our single match and tournament mode.</p>
+            <a href="#" class="btn btn-default">Download</a>
           </div>
         </div>
       </div>

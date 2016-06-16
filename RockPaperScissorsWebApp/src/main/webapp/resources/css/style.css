@@ -15,10 +15,10 @@ section {
 }
 
 .jumbotron {
-	background: #1b222a url("${pageContext.request.contextPath}/resources/img/shutterstock_284660570.jpg") no-repeat top center;
+	background: #1b222a url(../img/background.png) no-repeat top center;
 	background-size: cover;
 	color: #fff;
-	height: 598px;
+	height: 720px;
 	overflow: none;
 }
 
@@ -30,17 +30,10 @@ section {
 	margin-bottom: 40px;
 }
 
-.jumbotron img.app-btn {
-	width: 40%;
-	margin-right: 30px;
-}
-
-.jumbotron img.showcase-img {
-	width: 75%;
-}
-
 img.demo {
-	width: 100%;
+	/*width: 100%;*/
+	height: 200px;
+	width: 300px;
 	padding: 3px;
 	border: 1px solid #ccc; 
 }
