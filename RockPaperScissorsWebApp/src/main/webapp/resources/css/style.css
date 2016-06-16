@@ -15,7 +15,7 @@ section {
 }
 
 .jumbotron {
-	background: #1b222a url(../img/site_showcase_bg.jpg) no-repeat top center;
+	background: #1b222a url("${pageContext.request.contextPath}/resources/img/shutterstock_284660570.jpg") no-repeat top center;
 	background-size: cover;
 	color: #fff;
 	height: 598px;
