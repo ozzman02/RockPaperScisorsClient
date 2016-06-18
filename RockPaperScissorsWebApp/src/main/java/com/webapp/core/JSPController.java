@@ -1,5 +1,8 @@
 package com.webapp.core;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,24 +29,21 @@ public class JSPController {
 	
 	@RequestMapping(value="/processSingleMatch", method = RequestMethod.POST)
 	public String processSingleMatch(ModelAndView modelAndView,	
-			@RequestParam(value = "player1name") String player1Name,
-			@RequestParam(value = "player2name") String player2Name,
-			@RequestParam(value = "player1strategy") String player1strategy,
-			@RequestParam(value = "player2strategy") String player2strategy) {
+			@RequestParam(value = "player1name") String playerName1,
+			@RequestParam(value = "player2name") String playerName2,
+			@RequestParam(value = "player1strategy") String strategy1,
+			@RequestParam(value = "player2strategy") String strategy2) {
 		
-		if (player1Name == null || player1Name == "") {
-			System.out.println("Please enter player's name");
-		} else if (player2Name == null || player2Name == "") {
-			System.out.println("Please enter player's name");
-		} else if ((player1Name != "" && player2Name != "") && (player1Name == player2Name)) {
-			System.out.println("Player names can't be the same");
-		} else {
-			System.out.println(player1Name);
-			System.out.println(player1strategy);
-			System.out.println(player2Name);
-			System.out.println(player2strategy);
-		}
-
+		List<Game> games = new ArrayList<Game>();
+		String player1Strategy = strategy1.substring(0, 1);
+		String player2Strategy = strategy2.substring(0, 1);
+		Player p1 = new Player(playerName1);
+		Player p2 = new Player(playerName2);
+		Game g1 = new Game(p1, player1Strategy);
+		Game g2 = new Game(p2, player2Strategy);
+		games.add(g1);
+		games.add(g2);
+		
 		return "singlematch";
 	}
 	
