@@ -48,13 +48,13 @@
     	<section id="singlematch">
       		<div class="container">
       		<div>
-      			<!-- <form class="form-inline" name="results-filter" action="${pageContext.request.contextPath}/filterResults/{count}" method="GET">
+      			<form class="form-inline" name="results-filter" action="${pageContext.request.contextPath}/filterResults/{count}" method="GET">
               		<div class="form-group">
                 		<label>Filter highest scores</label>
-                		<input type="number" class="form-control" name="count">
+                		<input type="number" class="form-control" name="count" min = "1">
               		</div>
               		<button type="submit" class="btn btn-default">Search</button>
-              	</form><br><br> -->
+              	</form><br><br>
       		</div>
         		<div class="row">
           			<div class="col-md-8">

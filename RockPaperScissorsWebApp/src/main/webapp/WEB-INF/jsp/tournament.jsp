@@ -145,7 +145,7 @@
   									<option>S - Scissor</option>
  								</select>
               				</div><br><br><br>
-            				<button type="submit" class="btn btn-default">Submit</button><br>
+            				<button type="submit" class="btn btn-default">Compute Tournament</button><br>
             			</form>
           			</div>
           			<div class="col-md-4">

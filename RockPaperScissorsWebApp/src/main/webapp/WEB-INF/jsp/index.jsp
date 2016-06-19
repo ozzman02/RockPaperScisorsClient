@@ -52,19 +52,19 @@
             <img src="${pageContext.request.contextPath}/resources/img/singlematch.jpg" class="demo">
             <h2>Single Match</h2>
             <p>Played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand.</p>
-            <a href="#" class="btn btn-default">Instructions</a>
+            <a href="${pageContext.request.contextPath}/singleMatchInstructions" class="btn btn-default">Instructions</a>
           </div>
           <div class="col-md-4">
             <img src="${pageContext.request.contextPath}/resources/img/rockpaperscissors.jpg" class="demo">
             <h2>Tournament Mode</h2>
             <p>Have fun along with other players as you participate in our international online tournament. Play to be the ultimate champion!</p>
-            <a href="#" class="btn btn-default">Instructions</a>
+            <a href="${pageContext.request.contextPath}/tournamentInstructions" class="btn btn-default">Instructions</a>
           </div>
           <div class="col-md-4">
             <img src="${pageContext.request.contextPath}/resources/img/bigstock_Rock_Paper_And_Scissors_3994136.jpg" class="demo">
             <h2>Download sample files</h2>
             <p>Dowload our free sample files where you can have a guideline to play our single match and tournament mode.</p>
-            <a href="#" class="btn btn-default">Download</a>
+            <a href="${pageContext.request.contextPath}/resources/files/samples.txt" download class="btn btn-default">Download</a>
           </div>
         </div>
       </div>
@@ -75,10 +75,10 @@
           <div class="col-md-5">
             <h1>Features</h1>
             <ul>
-              <li> <i class="glyphicon glyphicon-ok"></i> Single Match Game</li>
-              <li> <i class="glyphicon glyphicon-ok"></i> Tournament Mode Game</li>
-              <li> <i class="glyphicon glyphicon-ok"></i> Upload Tournament Files</li>
-              <li> <i class="glyphicon glyphicon-ok"></i> Download File Samples</li>
+              <li><i class="glyphicon glyphicon-ok"></i> Single Match Game</li>
+              <li><i class="glyphicon glyphicon-ok"></i> Tournament Mode Game</li>
+              <li><i class="glyphicon glyphicon-ok"></i> Upload Tournament Files</li>
+              <li><i class="glyphicon glyphicon-ok"></i> Download File Samples</li>
             </ul>
           </div>
           <div class="col-md-4 col-md-offset-2">

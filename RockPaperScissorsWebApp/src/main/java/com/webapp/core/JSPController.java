@@ -8,6 +8,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -35,6 +36,21 @@ public class JSPController {
 	@RequestMapping("/tournament")
 	public String tournament(ModelAndView modelAndView) {
 		return "tournament";
+	}
+	
+	@RequestMapping("/filterdata")
+	public String filterData(ModelAndView modelAndView) {
+		return "filterdata";
+	}
+	
+	@RequestMapping("/singleMatchInstructions")
+	public String singleMatchInstructions(ModelAndView modelAndView) {
+		return "singleMatchInstructions";
+	}
+	
+	@RequestMapping("/tournamentInstructions")
+	public String tournamentInstructions(ModelAndView modelAndView) {
+		return "tournamentInstructions";
 	}
 	
 	@RequestMapping("/displayResults")
@@ -152,23 +168,24 @@ public class JSPController {
 		
 	}
 	
-//	@RequestMapping(value="/winners", method = RequestMethod.GET)
-//	public ModelAndView displayData(ModelAndView modelAndView) {
-//		
-//		RestTemplate restTemplate = new RestTemplate();
-//		
-//		ResponseEntity<List<Score>> scoresResponse = 
-//			restTemplate.exchange("http://52.41.23.217:8080//rockpaperscissors/getScores", 
-//				HttpMethod.GET, null, new ParameterizedTypeReference<List<Score>>() {
-//			});
-//		
-//		if (scoresResponse.getStatusCode().equals(HttpStatus.OK)) {			
-//			List<Score> results = scoresResponse.getBody();
-//			return new ModelAndView("results", "scorelist", results);
-//		} else {
-//			return new ModelAndView("error", "message", "Not valid");
-//		}
-//		
-//	}
+	@RequestMapping(value="/filterResults", method = RequestMethod.GET)
+	public ModelAndView displayData(ModelAndView modelAndView, 
+		@PathVariable(value = "count") int count) {
+		
+		RestTemplate restTemplate = new RestTemplate();
+		
+		ResponseEntity<List<Score>> scoresResponse = 
+			restTemplate.exchange("http://52.41.23.217:8080/rockpaperscissors/championship/top", 
+				HttpMethod.GET, null, new ParameterizedTypeReference<List<Score>>() {
+			});
+		
+		if (scoresResponse.getStatusCode().equals(HttpStatus.OK)) {			
+			List<Score> results = scoresResponse.getBody();
+			return new ModelAndView("filterdata", "scorelist", results);
+		} else {
+			return new ModelAndView("error", "message", "Not valid");
+		}
+		
+	}
 			
 }

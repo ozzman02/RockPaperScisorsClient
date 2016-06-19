@@ -73,7 +73,7 @@
   									<option>S - Scissor</option>
  								</select>
               				</div>
-              				<button type="submit" class="btn btn-default">Submit</button>
+              				<button type="submit" class="btn btn-default">Play Match</button>
             			</form>
           			</div>
           			<div class="col-md-4">

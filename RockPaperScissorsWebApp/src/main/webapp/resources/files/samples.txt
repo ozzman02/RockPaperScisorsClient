@@ -1,0 +1,81 @@
+Application Test Samples
+
+	Note: The Advanced Rest Client was used to test all jsons included in this file.
+
+	Services:
+		
+		Single Match: Computes a match between two players.
+		
+			URL: http://52.41.23.217:8080/rockpaperscissors/singlematch
+			Method: POST
+			Content type: application/json
+			JSON Tests: Please send this jsons individually.
+		
+				[{"playerName":"Luis", "strategy":"S" }, {"playerName":"Carolina", "strategy":"R"}]
+				
+				[{"playerName":"Pamela", "strategy":"R" }, {"playerName":"Dave", "strategy":"P"}]
+				
+				[{"playerName":"John", "strategy":"P" }, {"playerName":"Dave", "strategy":"P"}]
+
+		Tournament Mode: Computes a tournament of eight players.
+		
+			URL: http://52.41.23.217:8080/rockpaperscissors/championship/result
+			Method: POST
+			Content type: application/json
+			JSON Tests: Please send this tournaments individually.
+				
+				{
+					"games":
+					[
+						{"playerName":"Oscar","strategy":"S"},
+						{"playerName":"Allen","strategy":"P"},
+						{"playerName":"Mike","strategy":"R"},
+						{"playerName":"Luis","strategy":"S"},
+						{"playerName":"Mario","strategy":"S"},
+						{"playerName":"Carlos","strategy":"P"},
+						{"playerName":"Juana","strategy":"R"},
+						{"playerName":"Laura","strategy":"S"}
+					]
+				}
+
+				{
+					"games":
+					[
+						{"playerName":"Laura","strategy":"P"},
+						{"playerName":"Luis","strategy":"S"},
+						{"playerName":"Mario","strategy":"P"},
+						{"playerName":"Mike","strategy":"R"},
+						{"playerName":"Juana","strategy":"R"},
+						{"playerName":"Carlos","strategy":"S"},
+						{"playerName":"Allen","strategy":"P"},
+						{"playerName":"Oscar","strategy":"S"}
+					]
+				}
+
+				{
+					"games":
+					[
+						{"playerName":"Joseph","strategy":"R"},
+						{"playerName":"Keylor","strategy":"S"},
+						{"playerName":"Maria Jose","strategy":"S"},
+						{"playerName":"Karla","strategy":"S"},
+						{"playerName":"Pamela","strategy":"P"},
+						{"playerName":"Charles","strategy":"R"},
+						{"playerName":"Andres","strategy":"S"},
+						{"playerName":"Sergio","strategy":"P"}
+					]
+				}
+		
+		Display all scores: Display the scores accumulated by the first and second places of the tournaments.
+		
+			URL: http://52.41.23.217:8080/rockpaperscissors/getScores
+			Method: GET
+			Content type: application/json
+			
+		Top players: Display the list of the highest players based on the score and taking a count as parameter.
+			Parameter count represents the number of records that will be displayed.
+		
+			URL: http://52.41.23.217:8080/rockpaperscissors/championship/top
+			Method: GET
+			Query parameters: count
+			Content type: application/json
