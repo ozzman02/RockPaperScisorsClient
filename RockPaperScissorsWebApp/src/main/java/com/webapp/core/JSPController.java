@@ -3,6 +3,8 @@ package com.webapp.core;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -34,6 +36,25 @@ public class JSPController {
 	public String tournament(ModelAndView modelAndView) {
 		return "tournament";
 	}
+	
+	@RequestMapping("/displayResults")
+	public ModelAndView displayResults(ModelAndView modelAndView) {
+		
+		RestTemplate restTemplate = new RestTemplate();
+		
+		ResponseEntity<List<Score>> scoresResponse = 
+			restTemplate.exchange("http://52.41.23.217:8080//rockpaperscissors/getScores", 
+				HttpMethod.GET, null, new ParameterizedTypeReference<List<Score>>() {
+			});
+		
+		if (scoresResponse.getStatusCode().equals(HttpStatus.OK)) {			
+			List<Score> results = scoresResponse.getBody();
+			return new ModelAndView("results", "scorelist", results);
+		} else {
+			return new ModelAndView("error", "message", "Not valid");
+		}
+	}
+	
 	
 	@RequestMapping(value="/processSingleMatch", method = RequestMethod.POST)
 	public ModelAndView processSingleMatch(ModelAndView modelAndView,	
@@ -130,5 +151,24 @@ public class JSPController {
 		}
 		
 	}
+	
+//	@RequestMapping(value="/winners", method = RequestMethod.GET)
+//	public ModelAndView displayData(ModelAndView modelAndView) {
+//		
+//		RestTemplate restTemplate = new RestTemplate();
+//		
+//		ResponseEntity<List<Score>> scoresResponse = 
+//			restTemplate.exchange("http://52.41.23.217:8080//rockpaperscissors/getScores", 
+//				HttpMethod.GET, null, new ParameterizedTypeReference<List<Score>>() {
+//			});
+//		
+//		if (scoresResponse.getStatusCode().equals(HttpStatus.OK)) {			
+//			List<Score> results = scoresResponse.getBody();
+//			return new ModelAndView("results", "scorelist", results);
+//		} else {
+//			return new ModelAndView("error", "message", "Not valid");
+//		}
+//		
+//	}
 			
 }

@@ -1,4 +1,4 @@
-	<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +29,7 @@
             <li class="active"><a href="${pageContext.request.contextPath}/welcome">Home</a></li>
             <li><a href="${pageContext.request.contextPath}/singlematch">Single Match</a></li>
             <li><a href="${pageContext.request.contextPath}/tournament">Tournament Mode</a></li>
-            <li><a href="#">Tournament Results</a></li>
+            <li><a href="${pageContext.request.contextPath}/displayResults">Tournament Results</a></li>
             <li><a href="${pageContext.request.contextPath}/about">About</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -95,7 +95,7 @@
               <li><a href="${pageContext.request.contextPath}/welcome">Home</a></li>
               <li><a href="${pageContext.request.contextPath}/singlematch">Single Match</a></li>
               <li><a href="${pageContext.request.contextPath}/tournament">Tournament Mode</a></li>
-              <li><a href="#">Tournament Results</a></li>
+              <li><a href="${pageContext.request.contextPath}/displayResults">Tournament Results</a></li>
               <li><a href="${pageContext.request.contextPath}/about">About</a></li>
             </ul>
           </div>

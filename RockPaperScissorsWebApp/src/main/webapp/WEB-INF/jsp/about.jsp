@@ -25,22 +25,22 @@
           			<a class="navbar-brand em-text" href="#">Rock, Paper, Scissors Game</a>
         		</div>
         		<div id="navbar" class="collapse navbar-collapse">
-          		<ul class="nav navbar-nav">
+          			<ul class="nav navbar-nav">
             			<li><a href="${pageContext.request.contextPath}/welcome">Home</a></li>
             			<li><a href="${pageContext.request.contextPath}/singlematch">Single Match</a></li>
             			<li><a href="${pageContext.request.contextPath}/tournament">Tournament Mode</a></li>
-            			<li><a href="#">Tournament Results</a></li>
+            			<li><a href="${pageContext.request.contextPath}/displayResults">Tournament Results</a></li>
             			<li class="active"><a href="${pageContext.request.contextPath}/about">About</a></li>
-          		</ul>
-        		</div><!--/.nav-collapse -->
+          			</ul>
+        		</div>
       		</div>
     	</nav>
     	<section id="title-bar">
       		<div class="container">
         		<div class="row">
-          		<div class="col-md-12">
-            		<h1>About me and the Rock, Paper, Scissors solution</h1>
-          		</div>
+          			<div class="col-md-12">
+            			<h1>About me and the Rock, Paper, Scissors solution</h1>
+          			</div>
         		</div>
       		</div>
     	</section>
@@ -115,18 +115,18 @@
     	<footer>
       		<div class="container">
         		<div class="row">
-          		<div class="col-md-6 col-xs-12">
+          			<div class="col-md-6 col-xs-12">
             			<ul>
             				<li><a href="${pageContext.request.contextPath}/welcome">Home</a></li>
             				<li><a href="${pageContext.request.contextPath}/singlematch">Single Match</a></li>
             				<li><a href="${pageContext.request.contextPath}/tournament">Tournament Mode</a></li>
-            				<li><a href="#">Tournament Results</a></li>
+            				<li><a href="${pageContext.request.contextPath}/displayResults">Tournament Results</a></li>
             				<li><a href="${pageContext.request.contextPath}/about">About</a></li>
             			</ul>
-          		</div>
-          		<div class="col-md-6 col-xs-12">
+          			</div>
+          			<div class="col-md-6 col-xs-12">
             			<p>Copyright &copy; 2016, All Rights Reserved</p>
-          		</div>
+          			</div>
         		</div>
       		</div>
     	</footer>

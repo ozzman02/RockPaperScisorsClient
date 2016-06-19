@@ -30,7 +30,7 @@
             			<li><a href="${pageContext.request.contextPath}/welcome">Home</a></li>
             			<li class="active"><a href="${pageContext.request.contextPath}/singlematch">Single Match</a></li>
             			<li><a href="${pageContext.request.contextPath}/tournament">Tournament Mode</a></li>
-            			<li><a href="#">Tournament Results</a></li>
+            			<li><a href="${pageContext.request.contextPath}/displayResults">Tournament Results</a></li>
             			<li><a href="${pageContext.request.contextPath}/about">About</a></li>
           			</ul>
         		</div>
@@ -65,7 +65,7 @@
             				<li><a href="${pageContext.request.contextPath}/welcome">Home</a></li>
             				<li><a href="${pageContext.request.contextPath}/singlematch">Single Match</a></li>
             				<li><a href="${pageContext.request.contextPath}/tournament">Tournament Mode</a></li>
-            				<li><a href="#">Tournament Results</a></li>
+            				<li><a href="${pageContext.request.contextPath}/displayResults">Tournament Results</a></li>
             				<li><a href="${pageContext.request.contextPath}/about">About</a></li>
             			</ul>
           			</div>

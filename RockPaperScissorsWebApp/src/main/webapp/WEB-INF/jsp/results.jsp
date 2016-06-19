@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">    
-    	<title>Single Match</title>
+    	<title>Winners</title>
     	<!-- Bootstrap core CSS -->
     	<link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel="stylesheet">
     	<!-- Custom styles for this template -->
@@ -25,13 +26,13 @@
           			<a class="navbar-brand em-text" href="#">Rock, Paper, Scissors Game</a>
         		</div>
         		<div id="navbar" class="collapse navbar-collapse">
-          			<ul class="nav navbar-nav">
-            			<li><a href="${pageContext.request.contextPath}/welcome">Home</a></li>
-            			<li class="active"><a href="${pageContext.request.contextPath}/singlematch">Single Match</a></li>
-            			<li><a href="${pageContext.request.contextPath}/tournament">Tournament Mode</a></li>
-            			<li><a href="${pageContext.request.contextPath}/displayResults">Tournament Results</a></li>
-            			<li><a href="${pageContext.request.contextPath}/about">About</a></li>
-          			</ul>
+          		<ul class="nav navbar-nav">
+            		<li><a href="${pageContext.request.contextPath}/welcome">Home</a></li>
+            		<li><a href="${pageContext.request.contextPath}/singlematch">Single Match</a></li>
+            		<li><a href="${pageContext.request.contextPath}/tournament">Tournament Mode</a></li>
+            		<li class="active"><a href="${pageContext.request.contextPath}/displayResults">Tournament Results</a></li>
+            		<li><a href="${pageContext.request.contextPath}/about">About</a></li>
+          		</ul>
         		</div>
       		</div>
     	</nav>
@@ -39,7 +40,7 @@
       		<div class="container">
         		<div class="row">
           			<div class="col-md-12">
-            			<h1>Single Match</h1>
+            			<h1>Winners</h1>
           			</div>
         		</div>
       		</div>
@@ -48,38 +49,25 @@
       		<div class="container">
         		<div class="row">
           			<div class="col-md-8">
-            			<form name="single-match-form" action="${pageContext.request.contextPath}/processSingleMatch" method="post">
-              				<div class="form-group">
-                				<label>Enter Player's 1 Name</label>
-                				<input type="text" class="form-control" name="player1name" required>
-              				</div>
-              				<div class="form-group">
-                				<label>Select Player's 1 Strategy</label>
-                				<select class="form-control" name="player1strategy">
-  									<option>R - Rock</option>
-  									<option>P - Paper</option>
-  									<option>S - Scissor</option>
- 								</select>
-              				</div>
-              				<div class="form-group">
-                				<label>Enter Player's 2 Name</label>
-                				<input type="text" class="form-control" name="player2name" required>
-              				</div>
-              				<div class="form-group">
-                				<label>Enter Player's 2 Strategy</label>
-                				<select class="form-control" name="player2strategy">
-  									<option>R - Rock</option>
-  									<option>P - Paper</option>
-  									<option>S - Scissor</option>
- 								</select>
-              				</div>
-              				<button type="submit" class="btn btn-default">Submit</button>
-            			</form>
+            			<table class="table table-striped">
+            				<tr>
+            					<th>Player Id</th>
+            					<th>Player Name</th>
+            					<th>Player Score</th>
+            				</tr>
+            				<c:forEach var="score" items="${scorelist}">
+            					<tr>
+            						<td><c:out value="${score.id}" /></td>
+            						<td><c:out value="${score.playerName}" /></td>
+            						<td><c:out value="${score.score}" /></td>
+            					</tr>
+            				</c:forEach>
+            			</table>
           			</div>
           			<div class="col-md-4">
-            			<img src="${pageContext.request.contextPath}/resources/img/shutterstock_284660570.jpg" class="demo2">
-            			<h2 class="singlematch-image-title">Rock, Paper, Scissors !!!</h2>
-            			<p class="singlematch-image-text">Two players match so try your best and beat your enemy, lets see who's best ...</p>
+            			<img src="${pageContext.request.contextPath}/resources/img/awards.jpg" class="demo2">
+            			<h2 class="singlematch-image-title">Winners</h2>
+            			<p class="singlematch-image-text">Scores obtained by the first and second places of a tournament</p>
           			</div> 
         		</div>
       		</div>
