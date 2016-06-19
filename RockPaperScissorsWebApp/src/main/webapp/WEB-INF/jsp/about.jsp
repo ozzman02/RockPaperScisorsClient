@@ -16,19 +16,19 @@
    		<nav class="navbar navbar-default navbar-fixed-top">
       		<div class="container">
         		<div class="navbar-header">
-          		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             			<span class="sr-only">Toggle navigation</span>
             			<span class="icon-bar"></span>
             			<span class="icon-bar"></span>
             			<span class="icon-bar"></span>
-          		</button>
-          		<a class="navbar-brand em-text" href="#">Rock, Paper, Scissors Game</a>
+          			</button>
+          			<a class="navbar-brand em-text" href="#">Rock, Paper, Scissors Game</a>
         		</div>
         		<div id="navbar" class="collapse navbar-collapse">
           		<ul class="nav navbar-nav">
-            			<li><a href="${pageContext.request.contextPath}/">Home</a></li>
+            			<li><a href="${pageContext.request.contextPath}/welcome">Home</a></li>
             			<li><a href="${pageContext.request.contextPath}/singlematch">Single Match</a></li>
-            			<li><a href="#">Tournament Mode</a></li>
+            			<li><a href="${pageContext.request.contextPath}/tournament">Tournament Mode</a></li>
             			<li><a href="#">Tournament Results</a></li>
             			<li class="active"><a href="${pageContext.request.contextPath}/about">About</a></li>
           		</ul>
@@ -39,7 +39,7 @@
       		<div class="container">
         		<div class="row">
           		<div class="col-md-12">
-            			<h1>About me and the Rock, Paper, Scissors solution</h1>
+            		<h1>About me and the Rock, Paper, Scissors solution</h1>
           		</div>
         		</div>
       		</div>
@@ -47,14 +47,13 @@
     	<section id="about">
       		<div class="container">
         		<div class="row">
-          		<div class="col-md-8">
+          			<div class="col-md-8">
             			<h2>About me</h2>
             			<p> I'm a proactive person who learns through online courses and researching. I believe in teamwork, responsibility, new challenges and I like to achieve results. As a developer I like the Java programming tecnologies and frameworks like Spring. I'm also interested in Amazon Web Services which is oriented to Cloud Developing. I'm still studying Software Development Engineering (waiting to get the Software Developer Technician degree)   but I do have one year of experience working as back end Java Developer.</p>
             			<br>
             			<h2>About the solution</h2>
             			<br>
             			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            				
             				<div class="panel panel-default">
               				<div class="panel-heading" role="tab" id="headingOne">
                 					<h4 class="panel-title">
@@ -67,7 +66,6 @@
                 					</div>
               				</div>
             				</div>
-            				
             				<div class="panel panel-default">
               				<div class="panel-heading" role="tab" id="headingTwo">
                 					<h4 class="panel-title">
@@ -80,7 +78,6 @@
                 					</div>
               				</div>
             				</div>
-            				
             				<div class="panel panel-default">
               				<div class="panel-heading" role="tab" id="headingThree">
                 					<h4 class="panel-title">
@@ -93,7 +90,6 @@
                 					</div>
               				</div>
             				</div>
-            				
             				<div class="panel panel-default">
               				<div class="panel-heading" role="tab" id="headingFour">
                 					<h4 class="panel-title">
@@ -106,15 +102,13 @@
                 					</div>
               				</div>
             				</div>
-            				
+          				</div>
           			</div>
-          			
-          		</div>
-          		<div class="col-md-4">
+          			<div class="col-md-4">
             			<img src="${pageContext.request.contextPath}/resources/img/oscar.jpg" class="demo1">
             			<h2 class="about-image-developer">Oscar Santamaría Venegas</h2>
             			<p class="about-image-title"><i>Java Software Developer</i></p>
-          		</div> 
+          			</div> 
         		</div>
       		</div>
     	</section>
@@ -123,9 +117,9 @@
         		<div class="row">
           		<div class="col-md-6 col-xs-12">
             			<ul>
-            				<li><a href="${pageContext.request.contextPath}/">Home</a></li>
+            				<li><a href="${pageContext.request.contextPath}/welcome">Home</a></li>
             				<li><a href="${pageContext.request.contextPath}/singlematch">Single Match</a></li>
-            				<li><a href="#">Tournament Mode</a></li>
+            				<li><a href="${pageContext.request.contextPath}/tournament">Tournament Mode</a></li>
             				<li><a href="#">Tournament Results</a></li>
             				<li><a href="${pageContext.request.contextPath}/about">About</a></li>
             			</ul>

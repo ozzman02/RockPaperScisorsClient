@@ -5,22 +5,22 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Game {
 	
-	private Player player;
+	private String playerName;
 	private String strategy;
 	
 	public Game() {}
 
-	public Game(Player player, String strategy) {
-		setPlayer(player);
+	public Game(String playerName, String strategy) {
+		setPlayerName(playerName);
 		setStrategy(strategy);
 	}
 
-	public Player getPlayer() {
-		return player;
+	public String getPlayerName() {
+		return playerName;
 	}
 
-	public void setPlayer(Player player) {
-		this.player = player;
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
 	}
 
 	public String getStrategy() {
@@ -33,7 +33,7 @@ public class Game {
 
 	@Override
 	public String toString() {
-		return "Game [player=" + player + ", strategy=" + strategy + "]";
+		return "Game [playerName=" + playerName + ", strategy=" + strategy + "]";
 	}
 	
 }

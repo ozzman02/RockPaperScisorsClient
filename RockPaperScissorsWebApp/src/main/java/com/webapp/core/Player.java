@@ -5,14 +5,14 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Player {
 	
-	String name;
+	private String name;
 	
 	public Player() {}
-	
+		
 	public Player(String name) {
 		setName(name);
 	}
-		
+	
 	public String getName() {
 		return name;
 	}

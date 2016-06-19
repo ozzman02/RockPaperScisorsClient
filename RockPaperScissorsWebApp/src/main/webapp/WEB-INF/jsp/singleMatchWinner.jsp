@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">    
-    	<title>Single Match</title>
+    	<title>Single Match Winner</title>
     	<!-- Bootstrap core CSS -->
     	<link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel="stylesheet">
     	<!-- Custom styles for this template -->
@@ -39,7 +40,7 @@
       		<div class="container">
         		<div class="row">
           			<div class="col-md-12">
-            			<h1>Single Match</h1>
+            			<h1>Single Match Winner</h1>
           			</div>
         		</div>
       		</div>
@@ -47,40 +48,12 @@
     	<section id="singlematch">
       		<div class="container">
         		<div class="row">
-          			<div class="col-md-8">
-            			<form name="single-match-form" action="${pageContext.request.contextPath}/processSingleMatch" method="post">
-              				<div class="form-group">
-                				<label>Enter Player's 1 Name</label>
-                				<input type="text" class="form-control" name="player1name" required>
-              				</div>
-              				<div class="form-group">
-                				<label>Select Player's 1 Strategy</label>
-                				<select class="form-control" name="player1strategy">
-  									<option>R - Rock</option>
-  									<option>P - Paper</option>
-  									<option>S - Scissor</option>
- 								</select>
-              				</div>
-              				<div class="form-group">
-                				<label>Enter Player's 2 Name</label>
-                				<input type="text" class="form-control" name="player2name" required>
-              				</div>
-              				<div class="form-group">
-                				<label>Enter Player's 2 Strategy</label>
-                				<select class="form-control" name="player2strategy">
-  									<option>R - Rock</option>
-  									<option>P - Paper</option>
-  									<option>S - Scissor</option>
- 								</select>
-              				</div>
-              				<button type="submit" class="btn btn-default">Submit</button>
-            			</form>
-          			</div>
-          			<div class="col-md-4">
-            			<img src="${pageContext.request.contextPath}/resources/img/shutterstock_284660570.jpg" class="demo2">
-            			<h2 class="singlematch-image-title">Rock, Paper, Scissors !!!</h2>
-            			<p class="singlematch-image-text">Two players match so try your best and beat your enemy, lets see who's best ...</p>
-          			</div> 
+        			<div class="col-xs-6 col-md-4"></div>
+  					<div class="col-xs-6 col-md-4">
+  						<img src="${pageContext.request.contextPath}/resources/img/RPSCrest2007.gif" class="demo2">
+            			<h2 class="singlematch-image-title"><c:out value="${winner}"></c:out>, congratulations the match is yours !!!</h2>
+  					</div>
+  					<div class="col-xs-6 col-md-4"></div>
         		</div>
       		</div>
     	</section>
