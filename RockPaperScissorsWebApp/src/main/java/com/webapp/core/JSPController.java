@@ -15,44 +15,106 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
+/**
+ * The Class JSPController.
+ */
 @Controller
 public class JSPController {
 	
+	/**
+	 * Mainpage.
+	 *
+	 * @param modelAndView the model and view
+	 * @return the string
+	 */
+	@RequestMapping("/")
+	public String mainpage(ModelAndView modelAndView) {
+		return "index";
+	}
+	
+	/**
+	 * Index.
+	 *
+	 * @param modelAndView the model and view
+	 * @return the string
+	 */
 	@RequestMapping("/welcome")
 	public String index(ModelAndView modelAndView) {
 		return "index";
 	}
 	
+	/**
+	 * About.
+	 *
+	 * @param modelAndView the model and view
+	 * @return the string
+	 */
 	@RequestMapping("/about")
 	public String about(ModelAndView modelAndView) {
 		return "about";
 	}
 	
+	/**
+	 * Singlematch.
+	 *
+	 * @param modelAndView the model and view
+	 * @return the string
+	 */
 	@RequestMapping("/singlematch")
 	public String singlematch(ModelAndView modelAndView) {
 		return "singlematch";
 	}
 	
+	/**
+	 * Tournament.
+	 *
+	 * @param modelAndView the model and view
+	 * @return the string
+	 */
 	@RequestMapping("/tournament")
 	public String tournament(ModelAndView modelAndView) {
 		return "tournament";
 	}
 	
+	/**
+	 * Filter data.
+	 *
+	 * @param modelAndView the model and view
+	 * @return the string
+	 */
 	@RequestMapping("/filterdata")
 	public String filterData(ModelAndView modelAndView) {
 		return "filterdata";
 	}
 	
+	/**
+	 * Single match instructions.
+	 *
+	 * @param modelAndView the model and view
+	 * @return the string
+	 */
 	@RequestMapping("/singleMatchInstructions")
 	public String singleMatchInstructions(ModelAndView modelAndView) {
 		return "singleMatchInstructions";
 	}
 	
+	/**
+	 * Tournament instructions.
+	 *
+	 * @param modelAndView the model and view
+	 * @return the string
+	 */
 	@RequestMapping("/tournamentInstructions")
 	public String tournamentInstructions(ModelAndView modelAndView) {
 		return "tournamentInstructions";
 	}
 	
+	/**
+	 * Display results.
+	 *
+	 * @param modelAndView the model and view
+	 * @return the model and view
+	 */
 	@RequestMapping("/displayResults")
 	public ModelAndView displayResults(ModelAndView modelAndView) {
 		
@@ -72,6 +134,16 @@ public class JSPController {
 	}
 	
 	
+	/**
+	 * Process single match.
+	 *
+	 * @param modelAndView the model and view
+	 * @param playerName1 the player name 1
+	 * @param playerName2 the player name 2
+	 * @param strategy1 the strategy 1
+	 * @param strategy2 the strategy 2
+	 * @return the model and view
+	 */
 	@RequestMapping(value="/processSingleMatch", method = RequestMethod.POST)
 	public ModelAndView processSingleMatch(ModelAndView modelAndView,	
 			@RequestParam(value = "player1name") String playerName1,
@@ -104,6 +176,28 @@ public class JSPController {
 		
 	}
 	
+	/**
+	 * Process tournament.
+	 *
+	 * @param modelAndView the model and view
+	 * @param playerName1 the player name 1
+	 * @param playerName2 the player name 2
+	 * @param playerName3 the player name 3
+	 * @param playerName4 the player name 4
+	 * @param playerName5 the player name 5
+	 * @param playerName6 the player name 6
+	 * @param playerName7 the player name 7
+	 * @param playerName8 the player name 8
+	 * @param strategy1 the strategy 1
+	 * @param strategy2 the strategy 2
+	 * @param strategy3 the strategy 3
+	 * @param strategy4 the strategy 4
+	 * @param strategy5 the strategy 5
+	 * @param strategy6 the strategy 6
+	 * @param strategy7 the strategy 7
+	 * @param strategy8 the strategy 8
+	 * @return the model and view
+	 */
 	@RequestMapping(value="/processTournament", method = RequestMethod.POST)
 	public ModelAndView processTournament(ModelAndView modelAndView,	
 		@RequestParam(value = "player1name") String playerName1, 
@@ -168,6 +262,13 @@ public class JSPController {
 		
 	}
 	
+	/**
+	 * Display data.
+	 *
+	 * @param modelAndView the model and view
+	 * @param count the count
+	 * @return the model and view
+	 */
 	@RequestMapping(value="/filterResults", method = RequestMethod.GET)
 	public ModelAndView displayData(ModelAndView modelAndView, 
 		@PathVariable(value = "count") int count) {
