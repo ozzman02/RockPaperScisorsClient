@@ -121,7 +121,7 @@ public class JSPController {
 		RestTemplate restTemplate = new RestTemplate();
 		
 		ResponseEntity<List<Score>> scoresResponse = 
-			restTemplate.exchange("http://52.41.23.217:8080//rockpaperscissors/getScores", 
+			restTemplate.exchange("http://localhost:8080//rockpaperscissors/getScores", 
 				HttpMethod.GET, null, new ParameterizedTypeReference<List<Score>>() {
 			});
 		
@@ -165,7 +165,7 @@ public class JSPController {
 		RestTemplate restTemplate = new RestTemplate();
 		
 		ResponseEntity<Game> game = restTemplate.postForEntity
-			("http://52.41.23.217:8080/rockpaperscissors/singlematch", games, Game.class);
+			("http://localhost:8080/rockpaperscissors/singlematch", games, Game.class);
 		
 		if (game.getStatusCode().equals(HttpStatus.OK)) {
 			String winner = game.getBody().getPlayerName();			
@@ -251,7 +251,7 @@ public class JSPController {
 		RestTemplate restTemplate = new RestTemplate();
 		
 		ResponseEntity<Game> game = restTemplate.postForEntity
-			("http://52.41.23.217:8080/rockpaperscissors/championship/result", tournament, Game.class);
+			("http://localhost:8080/rockpaperscissors/championship/result", tournament, Game.class);
 		
 		if (game.getStatusCode().equals(HttpStatus.OK)) {
 			String champion = game.getBody().getPlayerName();			
@@ -276,7 +276,7 @@ public class JSPController {
 		RestTemplate restTemplate = new RestTemplate();
 		
 		ResponseEntity<List<Score>> scoresResponse = 
-			restTemplate.exchange("http://52.41.23.217:8080/rockpaperscissors/championship/top", 
+			restTemplate.exchange("http://localhost:8080/rockpaperscissors/championship/top", 
 				HttpMethod.GET, null, new ParameterizedTypeReference<List<Score>>() {
 			});
 		
